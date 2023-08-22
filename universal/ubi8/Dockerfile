@@ -59,14 +59,14 @@ USER 0
 RUN dnf install -y libXext libXrender libXtst libXi
 
 # camel-k
-ENV KAMEL_VERSION 1.8.2
+ENV KAMEL_VERSION 1.10.1
 RUN curl -L https://github.com/apache/camel-k/releases/download/v${KAMEL_VERSION}/camel-k-client-${KAMEL_VERSION}-linux-64bit.tar.gz | tar -C /usr/local/bin -xz \
     && chmod +x /usr/local/bin/kamel
 
 # Cloud
 
 # oc
-ENV OC_VERSION=4.12.12
+ENV OC_VERSION=4.13.8
 RUN curl -L https://mirror.openshift.com/pub/openshift-v4/clients/ocp/${OC_VERSION}/openshift-client-linux.tar.gz | tar -C /usr/local/bin -xz \
     && chmod +x /usr/local/bin/oc && chmod +x /usr/local/bin/kubectl
 
